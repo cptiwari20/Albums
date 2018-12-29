@@ -1,13 +1,13 @@
 import React from 'react';
-import { View, Image, Button } from "react-native";
+import { View, Image, Button, Linking } from "react-native";
 
-const CardSection = ({ imageurl }) => {
+const CardSection = ({ imageurl, url }) => {
   const { imageStyle} = styles;
   return (
     <View>
       <Image style={imageStyle} source={{ uri: imageurl }}></Image>
       <Button
-        onPress={() => {}}
+        onPress={() => {Linking.openURL(url)}}
         title="Buy Now"
         color="#848484"
         accessibilityLabel="Buy Now from Amazon"

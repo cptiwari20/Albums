@@ -27,7 +27,7 @@ state = { albums: [] }
               image={album.thumbnail_image}
               />
         </Card>
-        <CardSection imageurl={album.image}/>
+        <CardSection imageurl={album.image} url={album.url}/>
        </View>
       )
     })

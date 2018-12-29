@@ -19,6 +19,7 @@ const CardHeader = (props) => {
   )
 };
 
+
 const styles= {
   thumnailStyle: {
     height: 50,
