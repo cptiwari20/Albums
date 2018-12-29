@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import { Text, View } from 'react-native';
+import Card from './Card';
+import CardHeader from './CardHeader';
 
 class AlbumsList extends Component {
 state = { albums: [] }
@@ -15,13 +17,21 @@ state = { albums: [] }
  renderAlbumList(){
     return ( 
     this.state.albums.map((album, i) => {
-      return <Text key={i}>{album.title}</Text>
+     return ( 
+       <Card key={i}>
+        <CardHeader 
+          title={album.title} 
+          artist={album.artist}
+          image={album.thumbnail_image}
+          />
+      </Card>
+      )
     })
    )
  }
   render(){
     return (
-      <View>
+      <View>      
         {this.renderAlbumList()}      
       </View>
       )
